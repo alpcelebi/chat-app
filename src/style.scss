@@ -1,0 +1,324 @@
+
+
+body{
+    background-color: #EEEEEE;
+}
+
+.formContainer {
+    background-color: #EEEEEE;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .formWrapper {
+      background-color: #EEEEEE;
+      padding: 20px 60px;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      min-width: 500px;
+  
+      .logo {
+        color: #334257;
+        font-weight: bold;
+        font-size: 30px;
+  
+      }
+  
+      .title {
+        color: #334257;
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+  
+        input {
+          padding: 15px;
+          border: none;
+          width: 400px;
+          border-bottom: 1px solid #334257;
+          &::placeholder {
+            color: rgb(175, 175, 175);
+          }
+        }
+  
+        button {
+          background-color: #334257;
+          color: F3F4ED;
+          padding: 15px;
+          font-weight: bold;
+          font-size: larger;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          color: #EEEEEE;
+        }
+  
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #334257;
+          font-size: 12px;
+          cursor: pointer;
+  
+          img {
+            width: 32px;
+          }
+        }
+      }
+      p {
+        color: #393E46;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+.home{
+    background-color: #EEEEEE;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+      border-radius: 10px;
+      width:65%;
+      height: 80%;
+      display: flex;
+      overflow: hidden;
+
+      .sidebar{
+        flex:1;
+        background-color: #548CA8;
+
+        .navbar {
+          display: flex;
+          align-items: center;
+          background-color: #548CA8;
+          height: 50px;
+          padding:10px;
+          justify-content: space-between;
+          color:#EEEEEE;
+
+          .logo {
+            font-weight: bold;
+            font-size: 25px;
+          }
+
+          .user{
+            display: flex;
+            gap:10px;
+
+            img{
+              background-color: #334257;
+              height: 24px;
+              width: 24px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            button{
+              background-color: #334257;
+              color:#EEEEEE;
+              font-size: smaller;
+              border:none;
+              cursor: pointer;
+            }
+          }
+
+        }
+
+        .search {
+          border-bottom: 1px solid #334257;
+          
+         
+
+          .searchForm{
+            padding: 10px;
+            input{
+              background-color: transparent;
+              border:none;
+              color:#334257;
+              outline: none;
+              
+
+              &::placeholder{
+                color:#EEEEEE;
+              }
+            }
+          }
+        }
+
+        .userChat{
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #EEEEEE;
+          cursor: pointer;
+
+          &:hover{
+            background-color: #334257;
+            color:#EEEEEE;
+          }
+
+          img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            object-fit: cover;
+          }
+
+          .userChatInfo{
+            span{
+              font-size: larger;
+              font-weight: 500;
+            }
+            p{
+              font-size: smaller;
+              color:#EEEEEE;
+            }
+           
+          }
+        }
+      }
+
+      .chat{
+        flex:2;
+
+        .chatInfo{
+          height: 50px;
+          background-color: #334257;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          color: #EEEEEE;
+        }
+
+        .messages {
+          background-color: #334257;
+          padding:10px;
+          height: calc(100% - 160px);
+          overflow: scroll;
+
+          .message{
+            display: flex;
+            gap:20px;
+            margin-bottom: 20px;
+
+            .messageInfo{
+              display: flex;
+              flex-direction: column;
+              color:#EEEEEE;
+              font-weight: 300;
+
+              img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+                object-fit: cover;
+              }
+            }
+
+            .messageContent{
+              max-width: 80%;
+              display: flex;
+              flex-direction: column;
+              gap:10px;
+
+              p{
+                background-color: #EEEEEE;
+                padding: 10px 20px;
+                border-radius: 0px 10px 10px 10px;
+                max-width: max-content;
+              }
+              img{
+                width: 50%;
+              }
+            }
+
+
+            &.owner{
+              flex-direction: row-reverse;
+
+              .messageContent{
+                align-items:flex-end ;
+                p{
+                  background-color:#EEEEEE ;
+                  color:#334257;
+                  border-radius:10px 0px 10px 10px ;
+                }
+              }
+
+              
+            }
+          }
+        }
+
+        .input{
+          height: 50px;
+          background-color: #334257;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          input{
+            width: 100%;
+            border: none;
+            outline: none;
+            color:#393E46;
+            font-size: 18px;
+            height: auto;
+
+            &::placeholder{
+              color:#334257;
+
+            }
+          }
+
+          .send{
+            display: flex;
+            align-items: center;
+            gap:10px;
+
+            img{
+              height: 24px;
+              cursor: pointer;
+            }
+
+            button{
+              border: none;
+              padding:10px 15px;
+              color:#334257;
+              background-color: #EEEEEE;
+
+
+            }
+
+            button:hover{
+             
+              
+           
+              background-color: #548CA8;
+              color: #EEEEEE;
+
+
+            }
+          }
+        }
+      }
+    }
+}
+  
+
